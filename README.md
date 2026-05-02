@@ -3,7 +3,7 @@
 **QurbaniHat** is a modern, high-performance web application designed to simplify the process of buying and selling livestock for the Qurbani season. Built with a focus on premium user experience, it features ultra-modern interactions, glassmorphism UI, and seamless authentication.
 
 ## 🌐 Live URL
-[Insert your Firebase/Vercel Live Link Here]
+qurbanihatt.netlify.app
 
 ## 🚀 Key Features
 
