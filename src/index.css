@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* 
+  Custom Theme Tokens & Global Styles
+  Project: QurbaniHat - Livestock Booking Platform
+*/
+
+@layer base {
+  :root {
+    --bg-deep: #0f172a;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  }
+
+  body {
+    @apply bg-[#0f172a] text-slate-200 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom Selection Color */
+  ::selection {
+    @apply bg-indigo-500/30 text-indigo-200;
+  }
+
+  /* Smooth Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+/* 
+  Crystal Glassmorphism Utilities
+*/
+@layer components {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .crystal-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 shadow-lg shadow-indigo-500/20;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
